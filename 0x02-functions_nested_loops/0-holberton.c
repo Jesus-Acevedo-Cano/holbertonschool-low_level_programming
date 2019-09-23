@@ -10,10 +10,11 @@
  */
 int main(void)
 {
-char a[] = 'Holberton';
-for (b = '0'; b <= '8'; b++)
-{
+char a[]="Holberton";
+int b = 0;
+ int c = sizeof(a);
+
+for(; b <= c; b++)
 _putchar(a[b]);
-}
 return (0);
 }

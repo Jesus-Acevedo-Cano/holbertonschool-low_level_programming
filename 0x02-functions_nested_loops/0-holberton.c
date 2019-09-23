@@ -12,9 +12,12 @@ int main(void)
 {
 char a[]="Holberton";
 int b = 0;
- int c = sizeof(a);
+int c = sizeof(a);
 
 for(; b <= c; b++)
+{
 _putchar(a[b]);
+}
+_putchar('\n');
 return (0);
 }

@@ -8,16 +8,12 @@
  *
  *
  */
-int main(void)
+void print_alphabet(void)
 {
-char a[]="Holberton";
-int b = 0;
-int c = sizeof(a);
-
-for(; b <= c; b++)
+char a;
+for(a = 'a'; a <= 'z'; a++)
 {
-_putchar(a[b]);
+_putchar(a);
 }
 _putchar('\n');
-return (0);
 }

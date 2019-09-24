@@ -1,0 +1,17 @@
+#include "holberton.h"
+/**
+ * _abs - to print absolute value of a number
+ * @int: for integers
+ * Return: Always 0 (Success)
+ */
+int _abs(int)
+{
+if (int < 0)
+{
+return (int * -1);
+}
+else
+{
+return (int);
+}
+}

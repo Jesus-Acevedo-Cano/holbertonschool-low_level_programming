@@ -1,23 +1,18 @@
 #include "holberton.h"
 /**
- *
  * main - Entry point
  *
  * Return: Always 0 (Success)
  * comments are here for u betty
  *
- *
  */
 int main(void)
 {
-char a[]="Holberton";
+char a[] = "Holberton\n";
 int b = 0;
-int c = sizeof(a);
-
-for(; b <= c; b++)
+for (; b <= 9; b++)
 {
 _putchar(a[b]);
 }
-_putchar('\n');
 return (0);
 }

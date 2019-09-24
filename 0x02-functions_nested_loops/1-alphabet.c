@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- * main - Entry point
+ * print_alphabet - to print alphabet
+ * @void: no argument
  *
  * Return: Always 0 (Success)
- * comments are here for u betty
  *
  *
  */

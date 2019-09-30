@@ -1,0 +1,1 @@
+this is the readme file to the tasks from the pointers and arrays 

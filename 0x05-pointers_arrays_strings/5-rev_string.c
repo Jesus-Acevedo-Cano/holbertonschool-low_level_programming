@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_rev - function to print an array in reverse
+ * rev_string - function to ereverse an array
  * @s: for characters
  * Return: Always 0 (Success)
  */

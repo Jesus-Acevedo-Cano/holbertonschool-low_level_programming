@@ -1,8 +1,8 @@
-#include "holberton.h"
+B#include "holberton.h"
 
 /**
  **leet - function to change leters to numbers
- *@a: string array
+ *@s: string array
  *
  *Return: uppercase string
  */
@@ -16,10 +16,10 @@ char *leet(char *s)
 			d = 0;
 			while (b[d] != '\0')
 			{
-				if(s[c] == b[d] || s[c] == b[d] -32)
-				   s[c] = d + '0';
-				   d++;
-		    }
+				if (s[c] == b[d] || s[c] == b[d] - 32)
+					s[c] = d + '0';
+				d++;
+			}
 			c++;
 		}
 return (s);

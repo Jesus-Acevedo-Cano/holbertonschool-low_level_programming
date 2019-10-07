@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "holberton.h"
 /**
  * _strchr - function that replace a character in the array
@@ -14,11 +15,10 @@ for (i = 0; s[i] != '\0'; i++)
 if (s[i] == c)
 {
 return (s + i);
-}
-if (s[i] == '\0')
-{
-return ('\0');
+break;
 }
 }
-return (0);
+if (s[i] == c)
+return (s);
+return (NULL);
 }

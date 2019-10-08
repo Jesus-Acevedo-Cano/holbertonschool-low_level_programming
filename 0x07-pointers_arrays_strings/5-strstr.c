@@ -1,0 +1,21 @@
+#include "holberton.h"
+/**
+ * _strstr - function that locates a substring
+ * @haystack: array elements
+ * @needle: array elements to compare
+ *
+ * Return: string
+ */
+char *_strstr(char *haystack, char *needle)
+{
+	int a;
+
+	for (a = 0; haystack[a] != '\0'; a++)
+	{
+		if (haystack[a] == needle[0])
+		{
+			return (haystack + a);
+		}
+	}
+	return ('\0');
+}

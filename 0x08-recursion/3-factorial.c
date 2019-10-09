@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
- * _print_rev_recursion - recursive function to print in reverse
- * @s: array elements
+ * factorial - recursive function to print factorial
+ * @n: integers
  *
  *
- * Return: a char
+ * Return: integer
  */
 int factorial(int n)
 {

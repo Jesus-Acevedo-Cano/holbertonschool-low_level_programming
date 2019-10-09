@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 /**
  * _puts_recursion - recursive function that prints string
  * @s: array elements
@@ -15,6 +15,6 @@ void _puts_recursion(char *s)
 	else
 	{
 	_putchar(*s);
-       	_puts_recursion(s + 1);
+	_puts_recursion(s + 1);
 	}
 }

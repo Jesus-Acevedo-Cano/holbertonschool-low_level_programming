@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 /**
  * _puts_recursion - recursive function that prints string
  * @s: array elements

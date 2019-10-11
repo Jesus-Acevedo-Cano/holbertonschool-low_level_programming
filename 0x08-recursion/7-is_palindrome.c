@@ -10,6 +10,7 @@
 int is_palindrome(char *s)
 {
 	int b = aux_1(s);
+
 	if (b <= 1)
 		return (1);
 	return (aux_2(s, b));

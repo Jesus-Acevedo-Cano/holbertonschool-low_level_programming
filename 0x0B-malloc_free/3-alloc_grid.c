@@ -3,40 +3,43 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - function that duplicates an array
- * @width: string array
- * @height: string array
+ * alloc_grid - function that allocate memory
+ * @width: grid
+ * @height: grid
  *
  * Return: poiter
  */
 
 int **alloc_grid(int width, int height)
 {
-	char *a;
-	int d, c, b, e;
+	int **a;
+	int b, c;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-	for (c = 0; s1[c] != '\0'; c++)
+	if (width <= 0 || height <= 0)
 	{
+		return (NULL);
 	}
-	for (d = 0; s2[d] != '\0'; d++)
-	{
-	}
-	a = malloc(sizeof(char) * (c + d + 1));
+	a = (int **)malloc(sizeof(int *) * height);
 	if (a == NULL)
 	{
 		return (NULL);
 	}
-	for (b = 0; b <= c; b++)
+	for (b = 0; b < height; b++)
 	{
-		a[b] = s1[b];
-	}
-	for (e = 0; e <= d; e++)
-	{
-		a[c + e] = s2[e];
+		a[b] = malloc(sizeof(int) * width);
+		if (a[b] == NULL)
+		{
+			for (c = 0; c < b; c++)
+			{
+				free(a[c]);
+			}
+			free(a);
+			return (NULL);
+		}
+		for (c = 0; c < width; c++)
+		{
+			a[b][c] = 0;
+		}
 	}
 	return (a);
 }

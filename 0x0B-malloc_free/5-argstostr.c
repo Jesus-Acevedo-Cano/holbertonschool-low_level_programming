@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * argstostr - function that duplicates an array
+ * argstostr - function that concatenates all the arguments of your program
  * @ac: string array
  * @av: string array
  *
@@ -13,30 +13,35 @@
 char *argstostr(int ac, char **av)
 {
 	char *a;
-	int d, c, b, e;
+	int b, c, d, e;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-	for (c = 0; s1[c] != '\0'; c++)
-	{
-	}
-	for (d = 0; s2[d] != '\0'; d++)
-	{
-	}
-	a = malloc(sizeof(char) * (c + d + 1));
-	if (a == NULL)
-	{
+	d = 0;
+	e = 0;
+
+	if (ac == 0 || av == NULL)
 		return (NULL);
-	}
-	for (b = 0; b <= c; b++)
+
+	for (b = 0; b < ac; b++)
 	{
-		a[b] = s1[b];
+		for (c = 0; av[b][c] != '\0'; c++)
+		{
+		}
+		e = e + c + 1;
 	}
-	for (e = 0; e <= d; e++)
+	a = malloc(sizeof(char) * e + 1);
+	if (a == NULL)
+		return (NULL);
+	for (b = 0; b < ac; b++)
 	{
-		a[c + e] = s2[e];
+		for (c = 0; av[b][c] != '\0'; c++)
+		{
+			a[d] = av[b][c];
+			d++;
+		}
+		a[d] = '\n';
+		d++;
 	}
+	a[d] = '\0';
 	return (a);
+
 }

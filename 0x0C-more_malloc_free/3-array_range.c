@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * str_concat - function that duplicates an array
+ * array_range - function that duplicates an array
  * @min: string array
  * @max: string array
  *

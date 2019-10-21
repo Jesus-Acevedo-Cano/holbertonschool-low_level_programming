@@ -8,7 +8,7 @@
  *
  *
  *
- * Description: dogs info
+ * Return: Void
  */
 
 void print_dog(struct dog *d)
@@ -17,13 +17,16 @@ void print_dog(struct dog *d)
 	{
 		if (d->name == '\0')
 		{
-			d->name = "(Nil)";
+			d->name = "(nil)";
 		}
 		if (d->owner == '\0')
 		{
-			d->owner = "(Nil)";
+			d->owner = "(nil)";
 		}
 	printf("Name: %s\nAge: %f\nOwner: %s\n", d->name, d->age, d->owner);
 	}
-
+	else
+	{
+		return;
+	}
 }

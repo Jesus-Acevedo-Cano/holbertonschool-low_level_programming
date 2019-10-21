@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
-#include "holberton.h"
 
 /**
  * init_dog - function to initialize dog structure

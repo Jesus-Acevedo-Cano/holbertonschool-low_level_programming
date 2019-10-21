@@ -1,3 +1,5 @@
+#ifndef MYDOG
+#define MYDOG
 #include <stdio.h>
 #include <stdlib.h>
 

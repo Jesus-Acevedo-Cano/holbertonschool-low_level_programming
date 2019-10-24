@@ -40,5 +40,5 @@ int main(int argc, char *argv[])
 
 	c = (*d)(a, b);
 	printf("%d\n", c);
-	return(0);
+	return (0);
 }

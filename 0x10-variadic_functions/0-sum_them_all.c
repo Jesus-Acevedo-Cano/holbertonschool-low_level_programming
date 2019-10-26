@@ -1,12 +1,11 @@
 #include "variadic_functions.h"
 
 /**
- * array_iterator - function to iterate a function
- * @array: int array
- * @size: array size
- * @action: function to iterate
+ * sum_them_all - function sum arguments
+ * @n: unsigned int
  *
- * Return: Nothing.
+ *
+ * Return: sum result
  */
 
 int sum_them_all(const unsigned int n, ...)
@@ -19,12 +18,12 @@ int sum_them_all(const unsigned int n, ...)
 	{
 		return (0);
 	}
-	va_start (list, n);
+	va_start(list, n);
 	for (a = 0; a < n; a++)
 	{
-		res += va_arg (list, int);
+		res += va_arg(list, int);
 	}
-	va_end (list);
+	va_end(list);
 	return (res);
 
 }

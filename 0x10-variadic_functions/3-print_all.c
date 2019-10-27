@@ -1,18 +1,12 @@
 #include "variadic_functions.h"
 /**
- * str_check - Prints a string
+ * check - Prints a string
  * @str: String to print
  * Return: Nothing
  */
 
-char *str_check(char *str)
+char *check(char *str)
 {
-/**
- *	if (str == NULL)
- *		printf("(nil)");
- *	else
- *		printf("%s", str);
- */
 
 	if (str == NULL)
 		return ("(nil)");
@@ -26,36 +20,41 @@ char *str_check(char *str)
 void print_all(const char * const format, ...)
 {
 	va_list in;
-	char use;
+	char *sep;
 	unsigned int i;
 
-	va_start(in, format);
-	i = 0;
-	while (*(format + i) != '\0')
+	if (format != NULL)
 	{
-		use = 0;
-		switch (*(format + i))
+		va_start(in, format);
+		i = 0;
+		sep = "";
+		while (*(format + i) != '\0')
 		{
-		case 'c':
-			printf("%c", va_arg(in, int));
-			use++;
-			break;
-		case 'i':
-			printf("%d", va_arg(in, int));
-			use++;
-			break;
-		case 'f':
-			printf("%f", va_arg(in, double));
-			use++;
-			break;
-		case 's':
-			printf("%s", str_check(va_arg(in, char*)));
-			use++;
-			break;
+			switch (*(format + i))
+			{
+				case 'c':
+					printf("%s", sep);
+					sep = ", ";
+					printf("%c", va_arg(in, int));
+					break;
+				case 'i':
+					printf("%s", sep);
+					sep = ", ";
+					printf("%d", va_arg(in, int));
+					break;
+				case 'f':
+					printf("%s", sep);
+					sep = ", ";
+					printf("%f", va_arg(in, double));
+					break;
+				case 's':
+					printf("%s", sep);
+					sep = ", ";
+					printf("%s", check(va_arg(in, char*)));
+					break;
+			}
+			i++;
 		}
-		if (*(format + i + 1) != '\0' && use == 1)
-			printf(", ");
-		i++;
 	}
 	printf("\n");
 }

@@ -7,12 +7,13 @@
 
 char *str_check(char *str)
 {
-/*
+/**
  *	if (str == NULL)
  *		printf("(nil)");
  *	else
  *		printf("%s", str);
  */
+
 	if (str == NULL)
 		return ("(nil)");
 	return (str);

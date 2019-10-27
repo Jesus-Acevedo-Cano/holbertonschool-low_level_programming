@@ -1,16 +1,21 @@
 #include "variadic_functions.h"
 /**
- * print_string - Prints a string
+ * str_check - Prints a string
  * @str: String to print
  * Return: Nothing
  */
 
-void print_string(char *str)
+char *str_check(char *str)
 {
+/*
+ *	if (str == NULL)
+ *		printf("(nil)");
+ *	else
+ *		printf("%s", str);
+ */
 	if (str == NULL)
-		printf("(nil)");
-	else
-		printf("%s", str);
+		return ("(nil)");
+	return (str);
 }
 /**
  * print_all - Sample Text
@@ -43,7 +48,7 @@ void print_all(const char * const format, ...)
 			use++;
 			break;
 		case 's':
-			print_string(va_arg(in, char *));
+			printf("%s", str_check(va_arg(in, char*)));
 			use++;
 			break;
 		}

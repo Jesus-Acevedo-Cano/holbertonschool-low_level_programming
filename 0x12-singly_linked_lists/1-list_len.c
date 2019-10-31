@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_list - function to print data structure
+ * list_len - function to print number of elements on a list
  * @h: pointer to list
  *
  * Return: printed nodes cant

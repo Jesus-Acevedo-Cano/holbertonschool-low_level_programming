@@ -1,21 +1,20 @@
 #include "lists.h"
 
 /**
- * print_list - function to print data structure
- * @h: pointer to list
+ * free_list - function free head list
+ * @head: pointer to list
  *
- * Return: printed nodes cant
+ * Return: void
  */
 
 void free_list(list_t *head)
 {
 	while (head != NULL)
 	{
-		if (head != NULL)
+		if (head->str != NULL)
 		{
-			free(head);
+			free(head->str);
 		}
-		count++;
-		head = head->next;
+		free(head);
 	}
 }

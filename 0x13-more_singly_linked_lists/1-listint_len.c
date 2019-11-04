@@ -1,23 +1,20 @@
 #include "lists.h"
 
 /**
- * print_listint - function to print list of integers
+ * listint_len - function to print number of elements on a list
  * @h: pointer to list
  *
  * Return: printed nodes cant
  */
 
-size_t print_listint(const listint_t *h)
+size_t listint_len(const listint_t *h)
 {
 	size_t count = 0;
 
 	while (h != NULL)
 	{
 		if (h->n != '\0')
-		{
-			printf("%d\n", h->n);
-		}
-		count++;
+			count++;
 		h = h->next;
 	}
 	return (count);

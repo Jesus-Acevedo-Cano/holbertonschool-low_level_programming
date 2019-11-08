@@ -20,14 +20,14 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			free(fakehead);
 			return (1);
 		}
-		for (count = 0; count < index ; count++)
+		for (count = 0; count < index ; ++count)
 		{
 			some = fakehead;
 			if (some == NULL)
 			{
 				break;
 			}
-			some = some->next;
+			fakehead = fakehead->next;
 			if (index == count)
 			{
 				fakehead = some->next;

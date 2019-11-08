@@ -23,7 +23,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		for (count = 0; count < index ; ++count)
 		{
 			some = fakehead;
-			if (some == NULL)
+			if (!some)
 			{
 				break;
 			}

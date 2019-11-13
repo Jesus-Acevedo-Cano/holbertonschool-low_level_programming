@@ -1,4 +1,4 @@
-BB#include "holberton.h"
+#include "holberton.h"
 
 /**
  * main - main function to copy a file

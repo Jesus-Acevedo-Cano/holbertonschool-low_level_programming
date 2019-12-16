@@ -7,7 +7,7 @@
  * Return: index
  */
 
-listint_t *get_dnodeint_at_index(listint_t *head, unsigned int index)
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	if (head == NULL)
 	{

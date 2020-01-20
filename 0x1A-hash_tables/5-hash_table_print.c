@@ -11,7 +11,7 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *temp;
 	char *separator = "";
 
-	if (ht != NULL)
+	if (ht)
 	{
 		printf("{");
 
@@ -25,7 +25,6 @@ void hash_table_print(const hash_table_t *ht)
 				separator = ", ";
 				temp = temp->next;
 			}
-
 		}
 		printf("}\n");
 	}

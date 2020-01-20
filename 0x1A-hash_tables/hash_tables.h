@@ -9,6 +9,10 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <sys/wait.h>
+#include <string.h>
+#include <signal.h>
+#include <errno.h>
 
 /**
  * struct hash_node_s - Node of a hash table

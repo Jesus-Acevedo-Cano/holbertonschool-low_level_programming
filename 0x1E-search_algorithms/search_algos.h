@@ -1,11 +1,11 @@
 #ifndef LISTS
 #define LISTS
 
-#include <stdarg.h>
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 
 int linear_search(int *array, size_t size, int value);
+int binary_search(int *array, size_t size, int value);
+void print_array(int *array, size_t bottom, size_t top);
 
 #endif
